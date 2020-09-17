@@ -1,0 +1,95 @@
+#!/usr/bin/python3
+#/FBM-134/Da-Bomb
+import os
+import requests
+import os
+import socket
+import time
+import argparse
+import itertools
+import threading
+import sys
+import functools
+import configparser
+import urllib.error
+import urllib.parse
+import urllib.request
+import csv
+import gzip
+from datetime import datetime
+now = datetime.now()
+hour = now.hour
+minute = now.minute
+day = now.day
+month = now.month
+year = now.year
+
+
+class const():
+    ResetAll = "\033[0m"
+    Dim = "\033[2m"
+    Bold = "\033[1m"
+    Underlined = "\033[4m"
+    Blink = "\033[5m"
+    Reverse = "\033[7m"
+    Hidden = "\033[8m"
+
+    ResetBold = "\033[21m"
+    ResetDim = "\033[22m"
+    ResetUnderlined = "\033[24m"
+    ResetBlink = "\033[25m"
+    ResetReverse = "\033[27m"
+    ResetHidden = "\033[28m"
+
+
+class colors():
+    Default = "\033[39m"
+    Black = "\033[30m"
+    Red = "\033[31m"
+    Green = "\033[32m"
+    Yellow = "\033[33m"
+    Blue = "\033[34m"
+    Magenta = "\033[35m"
+    Cyan = "\033[36m"
+    LightGray = "\033[37m"
+    DarkGray = "\033[90m"
+    LightRed = "\033[91m"
+    LightGreen = "\033[92m"
+    LightYellow = "\033[93m"
+    LightBlue = "\033[94m"
+    LightMagenta = "\033[95m"
+    LightCyan = "\033[96m"
+    White = "\033[97m"
+
+
+'''
+	Facebook-Brute Force 1.0 -x
+	Jayalah Indonesiaku
+	(c)2020 
+	https://github.com/byindosecurity
+	[IP] 114.125.56.148
+'''
+
+def ____Linux():
+	try:
+		os.system("clear")
+		print(colors.LightRed + "[*] " + colors.LightGreen + "Start Installing the Application")
+		___no = 0
+		for x in itertools.cycle([".","..","...","   "]):
+			___no += 1
+			sys.stdout.write('\r' + colors.LightRed + "[*] " + colors.LightGreen + 
+				"Loading, Please Wait " + x + colors.Default)
+			sys.stdout.flush()
+			time.sleep(1)
+			if ___no == 10:
+				os.system("bash Bin/lib/Facebook/Linux/Directori")
+				break
+			pass
+	except KeyboardInterrupt:
+	    os.system("clear")
+	    print(colors.Red + "[*] " + colors.LightGreen +
+	          "Shutting Down The FBM-134 Console" + colors.Default)
+
+
+if __name__ == "__main__":
+    ____Linux()

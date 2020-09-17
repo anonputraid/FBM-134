@@ -1,0 +1,11 @@
+#!/bin/sh
+#/FBM-134/Bin/assets/Facebook/Linux/Sly-Dog
+
+	#Facebook-Brute Force 1.0 -x
+	#Jayalah Indonesiaku
+	#(c)2020 
+	#https://github.com/byindosecurity
+	#[IP] 114.125.56.148
+
+cd Bin/System/Linux/Facebook/
+python3 sly-dog.py
