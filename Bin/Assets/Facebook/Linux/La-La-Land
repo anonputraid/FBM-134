@@ -1,5 +1,0 @@
-#!/bin/sh
-#/FBM-134/Bin/assets/Facebook/Linux/La-La-Land
-
-cd Bin/System/Linux/Facebook/
-python3 La-La-Land.py

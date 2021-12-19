@@ -1,0 +1,296 @@
+{
+    "http-brute":{
+        "name": "http brute",
+        "path":"/scripts/http-brute.py",
+        "command" : "Bruteface",
+        "key": false,
+        "author": [
+            "anonputraid"
+        ],
+        "description" : "Run Facebook Brute Force Application Features", 
+        "references": [
+  
+        ]
+    },
+
+    "http-enum":{
+        "name": "http enum",
+        "path":"/scripts/http-enum.py",
+        "command" : "Randomface",
+        "key": false,
+        "author": [
+            "anonputraid"
+        ],
+        "description" : "Brutally Attack Random Target",
+        "references": [
+  
+        ]
+    },
+
+    "http-passwords":{
+        "name": "http passwords",
+        "path":"/scripts/http-password.py",
+        "command" : "Createword",
+        "key": false,
+        "author": [
+            "anonputraid"
+        ],
+        "description" : "Create a Wordlist About Target's Personal Data Automatically",
+        "references": [
+  
+        ]
+    },
+
+    "http-server" : {
+        "name": "http server",
+        "path":"/scripts/http-server.py",
+        "command" : "Phisface",
+        "key": false,
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Run Facebook Phishing Application Features",
+        "references": [
+  
+        ]
+    },
+
+    "http-users": {
+        "name": "http users",
+        "path":"/scripts/http-users.py",
+        "command" : "Target",
+        "key": true,
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Set new target",
+        "references": [
+  
+        ]
+    },
+
+    "http-banner":{
+        "name": "Banner",
+        "path":"/lib/core/api_common.py",
+        "command" : "Banner",
+        "key": true,
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Display an awesome FBM-134 banner",
+        "references": [
+  
+        ]
+    },
+
+    "http-exit" : {
+        "name": "Exit",
+        "path": "/lib/core/api_common.py",
+        "command" : "Exit",
+        "key": true,
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Exit the console OR Cntrl + C",
+        "references": [
+  
+        ]
+
+    },
+
+    "http-version" : {
+        "name": "version",
+        "path": "/lib/core/api_common.py",
+        "command" : "version",
+        "key": true,
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Show the framework and console library version numbers ",
+        "references": [
+  
+        ]
+    },
+
+    "http-sessions" : {
+        "name": "sessions",
+        "target": "",
+        "path": "/scripts/http-sessions.py",
+        "command" : "Sessions",
+        "key": false,
+        "ref_name": "wordlists/",
+        "author": [
+            "anonputraid"
+        ],
+        "mod_time": "2020-10-02 17:38:06 +0000",
+        "description": "Dump session listings and display information about sessions",
+        "post_auth" : "30",
+        "references": [
+            "https://mbasic.facebook.com/login.php"
+        ]
+    },
+
+    "http-target" : {
+        "name": "Target",
+        "target": "",
+        "path": "/scripts/http-target.py",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Set new target",
+        "references": [
+        ]
+    },
+
+    "http-clean" : {
+        "name": "http clean",
+        "path": "/lib/core/api_common.py",
+        "command" : "clear",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "clear the terminal screen in Linux ",
+        "references": [
+        ]
+    },
+
+    "http-characters": { 
+        "name": "Special Character",
+        "d.description" : "init",  "d": "-----------", 
+        "b.description" : "init",  "b": "\t\t",
+        "a.description" : "init",  "a": "\t",
+        "c.description" : "init",  "c": "\n",
+        "h.description" : "init",  "h": "\r",
+        "e.description" : "init",  "e": "--------",
+        "path": "/data/json/metadata_base.json",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Special Characters { letters, digits, or spaces. }",
+        "references": [
+
+        ]          
+    },
+
+    "http-changelog" : {
+        "name": "Changelog",
+        "version": "Version 1.1",
+        "path": "/lib/core/api_common.py",
+        "author": [
+            "anonputraid"
+        ],
+        "description" : " -*- Author : Anonputraid -*-",
+        "references": [
+        ]    
+    },
+
+    "http-commond": {
+        "name": "Command",
+        "Line": 7,
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Descriptions",
+        "UnderLine": 10,
+        "references": [
+        ]          
+    },
+
+    "http-generate": {
+        "name": "Generate",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Generate",
+        "references": [
+        ]          
+    },
+
+    "http-wordlists": {
+        "name": "Wordlists",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Wordlists",
+        "references": [
+        ]          
+    },
+
+    "http-setup": {
+        "name": "Setup",
+        "Wordlists" : "Setup Word = [",
+        "Target" : "Setup Vict = [",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Setup Generate Brute Force Attack",
+        "references": [
+        ]   
+    },
+
+    "http-warning": {
+        "name": "ClientError",
+        "err_msg": "Not Found: file_not_found ( Code: 404, Response: Failed)",
+        "err_inf": "Limit: Attack Blocked ( Please Wait, Response: Failed)",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Setup Generate Brute Force Attack",
+        "references": [
+        ]   
+    },
+
+    "http-mbasic.facebook.indo": {
+        "name": "mbasic.facebook",
+        "path": "/scripts/http-brute.py",
+        "username" : "email", "#1" : "init",
+        "password" : "pass",  "#2" : "init",
+        "dbbutton" : "login", "#3" : "init",
+        "dbsubmit" : "Masuk", "#4" : "init",
+        "Target" : "https://mbasic.facebook.com/login.php",
+        "dbheader" : "headers",
+        "path-raw" : "home.php",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "Info from login target",
+        "references": [
+            "https://mbasic.facebook.com/",
+            "https://web.facebook.com",
+            "https://id-id.facebook.com"
+        ]   
+    },
+
+    "http-verboses": {
+        "name": "Verbose Mode = [",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "using or expressed in more words than are needed.",
+        "references": [
+        ]
+    },
+
+    "http-ipinfo": {
+        "name" : "ipinfo",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "using or expressed in more words than are needed.",
+        "references": [
+        ]
+    },
+
+    "http-header" : {
+        "name" : "User Agents",
+        "author": [
+            "anonputraid"
+        ],
+        "description": "retrieve, create, and facilitate end-user interaction with Web content",
+        "references": [
+            "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"        
+        ]
+    }
+
+
+}
