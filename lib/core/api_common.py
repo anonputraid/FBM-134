@@ -55,14 +55,18 @@ def metadata_base(init=True,n = 0):
 
 
 def clean(init="clear"):
-    command = [
-        "http-clean"
-    ]
-    
-    for a in command:
-        b = x[a]["command"]
-        if init == b:
-            system.system(x[a]["command"])
+
+    if system.name == "posix":
+        command = [
+            "http-clean"
+        ]
+        
+        for a in command:
+            b = x[a]["command"]
+            if init == b:
+                system.system(x[a]["command"])
+    elif system.name == "nt":
+        system.system("cls")
 
 def version(init=True, n = 0):
     init_db = [

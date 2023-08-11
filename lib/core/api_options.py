@@ -20,7 +20,7 @@ args = parser.parse_args()
 
 commands = {
     'help':             metadata_base,
-    'bruteface':        http_brute.interactive,
+    'brutefb':          http_brute.interactive,
     'createword':       http_passwords.interactive,
     'version':          version,
     'clear':            clean,

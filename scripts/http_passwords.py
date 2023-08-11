@@ -10,6 +10,7 @@
 
 from lib.core import api_printout as opt
 from colorama import Fore as init_a, Back, Style
+import os as system
 
 import json as ini_db
 
@@ -44,10 +45,10 @@ def interactive():
 
     HacktivityActionJSON()
     
-    db["db_main"] = input(init_a.YELLOW + "FirtsName: " + Style.RESET_ALL).lower()
-    db["db_data"] = input(init_a.YELLOW + "Birthday:  " + Style.RESET_ALL) 
-    db["db_user"] = input(init_a.YELLOW + "Nick Name: " + Style.RESET_ALL).lower()
-    db["db_host"] = input(init_a.YELLOW + "Location:  " + Style.RESET_ALL).lower()
+    db["db_main"] = input(init_a.YELLOW + "FirtsName (Nama Lengkap) : " + Style.RESET_ALL).lower()
+    db["db_data"] = input(init_a.YELLOW + "Birthday [e.g 25042025] : " + Style.RESET_ALL) 
+    db["db_user"] = input(init_a.YELLOW + "Nick Name (Panggilan) : " + Style.RESET_ALL).lower()
+    db["db_host"] = input(init_a.YELLOW + "Location [e.g kota,provinsi,negara,random] : " + Style.RESET_ALL).lower()
     
     interfuse(db)
     pass
@@ -89,6 +90,16 @@ class main_controller():
             + "Counting \033[1;31m {} words.\033[1;m\n".format(str(no))
             )
         init_db.close()
+
+        if system.name == "nt":
+            with open("{}/{}".format(path,name_db), "r") as input_file:
+                lines  = input_file.readlines()
+
+            file_koreksi = [line.strip() for line in lines if line.strip()]
+
+            with open("{}/{}".format(path,name_db), "w") as output_file:
+                output_file.write("\n".join(file_koreksi))
+
 
         intr = input(init_a.BLUE + "Hyperspeed Print? (Y/n) : ").lower()
         

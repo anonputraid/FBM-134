@@ -2,8 +2,8 @@
     "http-brute":{
         "name": "http brute",
         "path":"/scripts/http-brute.py",
-        "command" : "Bruteface",
-        "key": false,
+        "command" : "brutefb",
+        "key": true,
         "author": [
             "anonputraid"
         ],
