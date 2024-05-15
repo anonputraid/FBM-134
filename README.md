@@ -48,9 +48,9 @@ Supported OS : **Ubuntu**/Linux Mint/Kali Linux
 
 ## How To Install ?
 ```text
- # clone the repo
  $ git clone https://github.com/anonputraid/FBM-134.git
- 
+ $ pip install -r requirement.txt
+ $ python main.py
 ```
 
 ## Contributing 💡
